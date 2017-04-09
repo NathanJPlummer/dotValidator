@@ -53,7 +53,7 @@
 /*style the validation dot*/
 
 .evo-c-validation-dot {
-    background-color: #F2617A;
+    background-color: #EDBE69;
     border-radius: 20px;
     height: 6px;
     position: absolute;
@@ -76,3 +76,6 @@
     border-bottom: 2px solid #212121;
 }
 
+.evo-c-dotValidator-age-inactive + .evo-c-validation-dot {
+  background-color: #777;
+}
