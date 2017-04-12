@@ -1,3 +1,7 @@
+/*dotValidator
+Written by: Nathan J Plummer
+Contributions by: Melissa Miller*/
+
 /*jslint plusplus: true*/
 var i; //used in loop
 
