@@ -7,7 +7,7 @@ dotValidator is a group of HTML/CSS/JavaScript Inputs with on the fly validation
 
 ### Search
 
-Requires at least three characters
+- Requires at least three characters
 
 ### Email
 
@@ -26,13 +26,12 @@ Requires at least three characters
 	
 ### Generic Number
 
-Checks user input is a number.  Forced in HTML5.
+- Checks user input is a number.  Forced in HTML5.
 
 ### Date of Birth
 
-Checks for a valid date
-
-Forced in HTML5
+- Checks for a valid date
+- Forced in HTML5
 
 ### Age
 
@@ -65,9 +64,9 @@ Note that the password requirements are based on recent security research from [
 
 ### General Usage
 
-Link to the stylesheet.css and dotValid.js
+Within your HTML document, link to the stylesheet.css and dotValid.js
 
-Copy and paste the code from the html file for any inputs you wish to import.
+Copy and paste the code from the demo HTML file for any inputs you wish to import.
 
 ### Turning on and off the dotValidator
 
@@ -75,7 +74,7 @@ The inputs have an attribute:
 
 	data-dotValidator="true"
 	
-Remove attribute or set to false if you don't want a specific input to have the validator.
+Remove attribute or set to false if you don't want a specific input to have the dotValidator.
 
 ### Changing the size of the validator dot
 
@@ -96,10 +95,10 @@ If you want to modify the size of all inputs change values of class "evo-c-dotVa
 By default, the validation colors for the dots are:
 
 - No User Input
-	- F2617A
+	- EDBE69
  
  - Invalid Input
- 	- DBE69
+ 	- F2617A
  	
  - Valid Input
  	- 31E96B
@@ -124,7 +123,7 @@ If you prefer to use an external library the code is separated, via functions an
 
 ##Step One- Remove Internal Library
 
-Neat the top of the dotValid.js file you'll see the following comment:
+Near the top of the dotValid.js file you'll see the following comment:
 
 	/*****START INTERNAL VALIDATION LIBRARY*****/
 	
