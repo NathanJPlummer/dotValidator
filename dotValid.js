@@ -314,6 +314,7 @@ if (len) {
     }
 }
 
+//change dot color on page load
 function dotDefault(color) {
     var dots = document.getElementsByClassName("evo-c-validation-dot");
     
@@ -322,6 +323,8 @@ function dotDefault(color) {
     }
 }
 
+
+//change width of dots
 function dotWidth(width) {
     var dots = document.getElementsByClassName("evo-c-validation-dot");
     
@@ -330,6 +333,7 @@ function dotWidth(width) {
     }
 }
 
+//change height of dots
 function dotHeight(height) {
     var dots = document.getElementsByClassName("evo-c-validation-dot");
     
