@@ -1,9 +1,18 @@
-# [dotValidator](https://nathanjplummer.github.io/dotValidator/)
-
+# dotValidator
 
 dotValidator is a group of HTML/CSS/JavaScript Inputs with on the fly validation.  You can see a live demo [at this location](https://nathanjplummer.github.io/Projects/dotValidator/).
 
+## Project Goals
+
+dotValidator is designed to be "drag and drop".  In other words: it is intended to be easy to both use and modify for even novice web developers.
+
+The code could certainly be further separated and better structured if the intention was the use GULP, GRUNT, or similar tools.  A minimized library could also be provided for performance reasons.
+
+As this is a small project and does not necessarily require advanced structuring, I am for now avoiding any optimizations that may add complexities for developers not comfortable yet with toolkits.
+
 ## User validation requirements
+
+If using the provided validation library, the user requirements for validation are listed below:
 
 ### Search
 
@@ -64,9 +73,9 @@ Note that the password requirements are based on recent security research from [
 
 ### General Usage
 
-Within your HTML document, link to the stylesheet.css and dotValid.js
+Within your HTML document, link to the dotValid.css and dotValid.js
 
-Copy and paste the code from the demo HTML file for any inputs you wish to import.
+You can copy and paste the code from the demo HTML file for any inputs you wish to import.
 
 ### Turning on and off the dotValidator
 
@@ -76,21 +85,7 @@ The inputs have an attribute:
 	
 Remove attribute or set to false if you don't want a specific input to have the dotValidator.
 
-### Changing the size of the validator dot
-
-In the stylesheet, find class "evo-c-validation-dot."
-
-You can change the width and height here.  If you want to keep the dot circular keep both width and height equal.  Be aware you may also have to change the border-radius.
-
-### Changing the input size
-
-The inputs will adjust to the size of their container.  In most cases, you don't want to modify an input size directly.
-
-Modify the container div, ideally by adding a new class.
-
-If you want to modify the size of all inputs change values of class "evo-c-dotValidator-container".
-
-### Changing the dot validation colors
+### Changing the size and color of the dot
 
 By default, the validation colors for the dots are:
 
@@ -102,18 +97,52 @@ By default, the validation colors for the dots are:
  	
  - Valid Input
  	- 31E96B
+ 
+
  	
- These three variables are at the very top of the dotValid.js file.
- 
- Changing the values here will change them for every input.
- 
- *Also be aware:*
- 
- The dot color on page load is defined in the CSS class "evo-c-validation-dot" via the background-color.
- 
-By default it is equal to the "no user input" color.
- 
-If you change that, and you want the default color to be equal to the no input color, you'll have to change that value in CSS as well.
+The width and the height of the dot are set to "6px".
+
+You can find options for changing these values at the top of the dotValid.js file:
+
+```JavaScript
+
+/**********DEFINE DOT OPTIONS***********/
+
+
+
+//no input color
+var dotNoInput = "#EDBE69";
+
+```
+
+
+By default the dot color on page load is equal to the "No User Input" color, but this too can be changed in the settings.
+
+If you want to keep the dot circular keep the width and height at equal value.  Be aware you may also have to change the border-radius when changing the dot size.
+
+### Changing the input size
+
+The inputs will adjust to the size of their container.  In most cases, you don't want to modify an input size directly.
+
+Modify the container div, ideally by adding a new class.
+
+If you want to modify the size of all inputs change values of class "evo-c-dotValidator-container".
+
+### Box Sizing
+
+dotValidator was designed with border-box box sizing in mind.  To prevent conflicts with web pages using a different box sizing method, the following CSS code is added to the top of the dotValid.css file:
+
+
+```CSS
+*[class^=”evo-c-dotValidator”] {
+    box-sizing: border-box;
+}
+```
+
+This declaration avoids potential conflicts but may slow down page loads.
+
+If you are using dotValidator inside an environment that uses the border-box model universally you can speed things up by deleting this section.
+
  
 # Using an External Library
  
