@@ -2,6 +2,10 @@
 
 dotValidator is a group of HTML/CSS/JavaScript Inputs with on the fly validation.  You can see a live demo [at this location](https://nathanjplummer.github.io/Projects/dotValidator/).
 
+## What's New
+
+4/11/2018- The project has been updated to allow easier manipulation of the dots via a single settings location.  Additionally, files have been restructured in a way that better projects their intended purpose.
+
 ## Project Goals
 
 dotValidator is designed to be "drag and drop".  In other words: it is intended to be easy to both use and modify for even novice web developers.
