@@ -2,17 +2,13 @@
 
 dotValidator is a group of HTML/CSS/JavaScript Inputs with on the fly validation.  You can see a live demo [at this location](https://nathanjplummer.github.io/Projects/dotValidator/).
 
-## What's New
-
-4/11/2018- The project has been updated to allow easier manipulation of the dots via a single settings location.  Additionally, files have been restructured in a way that better projects their intended purpose.
-
 ## Project Goals
 
 dotValidator is designed to be "drag and drop".  In other words: it is intended to be easy to both use and modify for even novice web developers.
 
 The code could certainly be further separated and better structured if the intention was the use GULP, GRUNT, or similar tools.  A minimized library could also be provided for performance reasons.
 
-As this is a small project and does not necessarily require advanced structuring, I am for now avoiding any optimizations that may add complexities for developers not comfortable yet with toolkits.
+As this is a small project and does not necessarily require advanced structuring, I am for now avoiding any optimizations that may add complexities for developers not comfortable yet with pre-processors or toolkits.
 
 ## User validation requirements
 
@@ -134,21 +130,32 @@ If you want to modify the size of all inputs change values of class "evo-c-dotVa
 
 ### Box Sizing
 
-dotValidator was designed with border-box box sizing in mind.  To prevent conflicts with web pages using a different box sizing method, the following CSS code is added to the top of the dotValid.css file:
-
+From the top of the included CSS file:
 
 ```CSS
-*[class^=”evo-c-dotValidator”] {
+
+.evo-c-dotValidator-container {
+    position: relative;
+
+    display: flex;
+    flex-flow: row nowrap;
+
     box-sizing: border-box;
+    width: 220px;
+    max-width: 100%;
+    height: 60px;
+
+    background-color: #ECEFF3;
 }
+
+
 ```
 
-This declaration avoids potential conflicts but may slow down page loads.
+If your site already uses `box-sizing: border-box;` you can remove that line with no ill effects.
 
-If you are using dotValidator inside an environment that uses the border-box model universally you can speed things up by deleting this section.
+If you're unsure what that means: this is only a very slight optimization and leaving that css line in won't cause any issues.
 
- 
-# Using an External Library
+ # Using an External Library
  
 To keep things lean and to allow drag and drop usage of dotValidator, the dotValid.js contains a small internal validation library.
 
