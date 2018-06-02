@@ -83,7 +83,7 @@ The inputs have an attribute:
 
 	data-dotValidator="true"
 	
-Remove attribute or set to false if you don't want a specific input to have the dotValidator.
+Set this attribute to false if you don't want a specific input to have the dotValidator.
 
 ### Changing the size and color of the dot
 
