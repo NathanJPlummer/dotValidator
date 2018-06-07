@@ -44,7 +44,7 @@ If using the provided validation library, the user requirements for validation a
 
 ### Age
 
-Not an actual input.  The data will be automatically pulled from Date of Birth.  Compares todays today and calculates the age.
+Not an actual input.  The data will be automatically pulled from Date of Birth.  Compares the DOB to today's date and calculates the age.
 
 If age is 18 or older, age validated.
 
