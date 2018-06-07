@@ -145,7 +145,7 @@ validator.zipcode = (function(input) {
   }
 
   //check string is only digits
-  if (Number.isNaN(input) === true) {
+  if (Number.isInteger(input * 1) === false) {
     return false;
   }
 
