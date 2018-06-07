@@ -126,30 +126,7 @@ validator.username = (function(input) {
 //validate zipcode
 validator.zipcode = (function(input) {
 
-  //check input length is not six
-  //fixes edge case of five digits plus hyphen
-  //with no additional digits
-  if (input.length === 6) {
-    return false;
-  }
-
-  //convert to string
-  input = input.toString();
-
-  //remove hyphen if present
-  input = input.replace("-", "");
-
-  //check length is 5 or 9 digits
-  if ((input.length !== 5) && (input.length !== 9)) {
-    return false;
-  }
-
-  //check string is only digits
-  if (Number.isInteger(input * 1) === false) {
-    return false;
-  }
-
-  return true;
+  return /^[0-9]{5}(?:-[0-9]{4})?$/.test(input);
 
 });
 
