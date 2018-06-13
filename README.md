@@ -1,6 +1,6 @@
 # dotValidator
 
-dotValidator is a group of HTML/CSS/JavaScript Inputs with on the fly validation.  You can see a live demo [at this location](https://nathanjplummer.github.io/Projects/dotValidator/).
+dotValidator is a group of HTML/CSS/JavaScript Inputs with on the fly validation.  You can see a live demo [at this location](https://nathanjplummer.github.io/#virtualCell-contentPane-Projects-Default).
 
 ## Project Goals
 
