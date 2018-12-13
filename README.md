@@ -161,7 +161,7 @@ To keep things lean and to allow drag and drop usage of dotValidator, the dotVal
 
 If you prefer to use an external library the code is separated, via functions and comments, to make that process as easy as possible.
 
-##Step One- Remove Internal Library
+## Step One- Remove Internal Library
 
 Near the top of the dotValid.js file you'll see the following comment:
 
