@@ -1,5 +1,11 @@
 # dotValidator
 
+Note: this branch incorporates better responsive code, fixing some display bugs at lower resolutions.
+
+These fixes have not been extensively tested, and hence are not currently merged into the master branch.
+
+
+
 dotValidator is a group of HTML/CSS/JavaScript Inputs with on the fly validation.  You can see a live demo [at this location](https://nathanjplummer.github.io/#virtualCell-contentPane-Projects-Default).
 
 ## Project Goals
@@ -82,7 +88,7 @@ You can copy and paste the code from the demo HTML file for any inputs you wish 
 The inputs have an attribute:
 
 	data-dotValidator="true"
-	
+
 Set this attribute to false if you don't want a specific input to have the dotValidator.
 
 ### Changing the size and color of the dot
@@ -91,13 +97,13 @@ By default, the validation colors for the dots are:
 
 - No User Input
 	- EDBE69
- 
+
  - Invalid Input
  	- F2617A
- 	
+	
  - Valid Input
  	- 31E96B
- 
+
 
  	
 The width and the height of the dot are set to "6px".
@@ -156,7 +162,7 @@ If your site already uses `box-sizing: border-box;` you can remove that line wit
 If you're unsure what that means: this is only a very slight optimization and leaving that css line in won't cause any issues.
 
  # Using an External Library
- 
+
 To keep things lean and to allow drag and drop usage of dotValidator, the dotValid.js contains a small internal validation library.
 
 If you prefer to use an external library the code is separated, via functions and comments, to make that process as easy as possible.
@@ -166,11 +172,11 @@ If you prefer to use an external library the code is separated, via functions an
 Near the top of the dotValid.js file you'll see the following comment:
 
 	/*****START INTERNAL VALIDATION LIBRARY*****/
-	
+
 Just past the document halfway mark you'll see a similar comment:
 
 	/*****END INTERNAL VALIDATION LIBRARAY*****/
-	
+
 To remove the internal library simply delete everything between these two comments.
 
 ##Step Two: Update Library References with Your Own Library
@@ -178,14 +184,14 @@ To remove the internal library simply delete everything between these two commen
 Directly below the code you just removed you'll see the following comment:
 
 	/*****validateMe sub functions- validation procedure via content type*****/
-	
+
 This section contains all references to the library, separated by input type.
 
 For example:
 
 	//Email
 	inputCode.email = (function (targ)
-	
+
 For the email dotValidator.
 
 Go through this section and remove any references to the internal library and replace them with your own.
@@ -205,5 +211,5 @@ So for example (Pay Attention to the Comments):
 	        targ.nextElementSibling.style.backgroundColor = dotInvalid;
 	    }
 	});
-	
+
 Replace those references and you should be good to go!

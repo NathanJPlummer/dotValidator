@@ -3,8 +3,7 @@
 .evo-c-dotValidator-container {
     position: relative;
 
-    display: flex;
-    flex-flow: row nowrap;
+    display: block;
 
     box-sizing: border-box;
     width: 220px;
@@ -12,15 +11,16 @@
     height: 60px;
 
     background-color: #ECEFF3;
+
+
 }
 
 /*Descriptions: ex: "Phone Number (US)*/
 
 .evo-c-dotValidator-label {
     position: absolute;
-
-    padding: 10px;
-
+    top: 10%;
+    left: 2%;
     color: #9CABBA;
 
     font-family: 'Roboto', sans-serif;
@@ -39,6 +39,8 @@
     background-color: #ECEFF3;
 
     font-family: 'Roboto', sans-serif;
+
+    height: 100%;
 }
 
 
@@ -80,3 +82,4 @@
 .evo-c-dotValidator-age-inactive + .evo-c-validation-dot {
   background-color: #777;
 }
+
